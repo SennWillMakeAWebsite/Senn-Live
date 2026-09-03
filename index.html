@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Senn Live - personal presence and activity system for Senn Hub."
+  >
+
+  <meta name="theme-color" content="#080b12">
+
+  <title>Senn Live</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app-shell">
+
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Senn Live home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+
+        <span>Senn Live</span>
+      </a>
+
+      <div class="connection">
+        <i id="connectionDot"></i>
+        <span id="connectionText">System ready</span>
+      </div>
+    </header>
+
+
+    <section class="hero">
+      <p class="eyebrow">SENN HUB / PRESENCE SYSTEM</p>
+
+      <h1>
+        Live presence,
+        <br>
+        <span>without the noise.</span>
+      </h1>
+
+      <p class="hero-copy">
+        A lightweight status layer for Senn Hub.
+        It tracks presence, sessions and activity locally now,
+        with realtime infrastructure ready to be connected later.
+      </p>
+    </section>
+
+
+    <section class="status-card" aria-labelledby="statusTitle">
+
+      <div class="status-main">
+
+        <div class="status-icon" id="statusIcon">
+          <span></span>
+        </div>
+
+        <div>
+          <p class="label">CURRENT STATUS</p>
+
+          <h2 id="statusTitle">Online</h2>
+
+          <p id="statusDescription">
+            Senn Live is detecting activity.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="status-actions">
+
+        <button
+          class="status-button active"
+          data-status="online"
+        >
+          Online
+        </button>
+
+        <button
+          class="status-button"
+          data-status="idle"
+        >
+          Idle
+        </button>
+
+        <button
+          class="status-button"
+          data-status="offline"
+        >
+          Offline
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="metrics-grid">
+
+      <article class="metric-card">
+
+        <span class="metric-label">
+          CURRENT SESSION
+        </span>
+
+        <strong id="sessionTimer">
+          00:00:00
+        </strong>
+
+        <small>
+          Time since this session started
+        </small>
+
+      </article>
+
+
+      <article class="metric-card">
+
+        <span class="metric-label">
+          LAST ACTIVE
+        </span>
+
+        <strong id="lastActive">
+          Just now
+        </strong>
+
+        <small id="lastActiveExact">
+          Waiting for activity
+        </small>
+
+      </article>
+
+
+      <article class="metric-card">
+
+        <span class="metric-label">
+          HEARTBEAT
+        </span>
+
+        <strong id="heartbeat">
+          Healthy
+        </strong>
+
+        <small id="heartbeatDetail">
+          Local heartbeat active
+        </small>
+
+      </article>
+
+    </section>
+
+
+    <section class="activity-card">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="label">ACTIVITY</p>
+
+          <h2>
+            Recent presence
+          </h2>
+        </div>
+
+        <button
+          id="clearActivity"
+          class="text-button"
+        >
+          Clear
+        </button>
+
+      </div>
+
+
+      <div
+        id="activityList"
+        class="activity-list"
+      ></div>
+
+    </section>
+
+
+    <footer>
+
+      <span>
+        Senn Live v0.1
+      </span>
+
+      <span>
+        Local prototype · Realtime backend later
+      </span>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
